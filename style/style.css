@@ -3,7 +3,7 @@
     margin: 0;
     padding: 0;
 }
-
+/*---GENERAL---*/
 body {
     font-family: 'Fira Code', monospace;
     background-color: white;
@@ -15,22 +15,28 @@ header {
     padding: 1%;
 }
 
+main {
+    margin-left: 10%;
+    padding-right: 10%;
+}
+
+section {
+    padding-top: 10%;
+}
+
+h1{
+    color: cornflowerblue;
+    font-size:2em;
+}
+/*---FIN DE GENERAL---*/
+
+/*---ENCABEZADO---*/
 nav {
     padding-left: 9%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding-right: 10%;
-}
-
-main {
-    margin-left: 10%;
-    padding-right: 10%;
-}
-
-h1{
-    color: cornflowerblue;
-    font-size:2em;
 }
 
 .logo {
@@ -56,7 +62,9 @@ nav a:hover{
     border-bottom: 2px solid white;
     width: max-content;
 }
+/*---FIN DEL ENCABEZADO---*/
 
+/* SOBRE MI */
 #aboutMe {
     display: flex;
     align-items: center;
@@ -80,45 +88,9 @@ nav a:hover{
     padding-top: 3%;
     padding-bottom: 3%;
 }
+/* FIN DE SOBRE MI */
 
-svg:hover {
-    transform: scale(1.1);
-    transition: transform 0.3s ease-in-out; 
-}
-
-
-.linea{
-    border-bottom: 2px solid cornflowerblue;
-    width: max-content;
-    transform: scale(1.01); 
-}
-
-.linea:hover{
-    border-bottom:2px solid mediumslateblue;
-    width: max-content;
-}
-
-
-.boton {
-    background-color: white;
-    padding: 10px 20px;
-    border: cornflowerblue solid 2px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: all 0.4s ease; 
-}
-
-.boton:hover {
-    background-color: cornflowerblue;
-    color: white;
-    transform: scale(1.01); 
-}
-
-.boton, a{
-    text-decoration: none;
-    color: black;
-}
-
+/* HABILIDADES */
 #habilidades{
     padding-top: 15%;
 }
@@ -133,44 +105,41 @@ svg:hover {
 .hab1 {
     text-align: center;
 }
+/* FIN DE HABILIDADES */
 
-section {
-    padding-top: 10%;
-}
-
+/*---SECCION CONTACTOS---*/
 #contacto {
-    text-align: center;
-    margin-bottom: 20px;
+    padding-top: 10%;
+    display: flex;
+    flex-direction: column;
 }
 
 #contacto p{
-    padding-right: 30%;
-    margin:1%;
+    padding: 2%;
 }
 
 #contacto form input,
 #contacto form textarea {
-    margin-left: 7%;
+    padding-top: 3%;
     width: 60%;
-    display: block;
     margin-bottom: 10px;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
 }
 
-#contacto form textarea{
+#contacto form textarea {
     height: 120px;
 }
 
 #contacto form button {
+    display: block;
+    margin-left: 25%;
     padding: 10px 20px;
-    border: none;
+    border: 1px solid cornflowerblue;
     border-radius: 5px;
     background-color: cornflowerblue;
     color: white;
-    margin-right: 30%;
-    margin-top: 3%;
 }
 
 #contacto form button:hover {
@@ -178,8 +147,9 @@ section {
     border: 1px solid cornflowerblue;
     color:cornflowerblue;
 }
+/*---FIN DE SECCION CONTACTOS---*/
 
-
+/*---SECCION PROYECTOS---*/
 .container {
     display: flex;
     justify-content: space-between;
@@ -197,6 +167,7 @@ section {
     width: 100%;
     height: 100%;
     display: block;
+    border-radius: 5%;
 }
 
 .overlay {
@@ -212,20 +183,77 @@ section {
     justify-content: center;
     opacity: 0;
     transition: opacity 0.3s ease-in-out;
+    border-radius: 5%;
 }
 
 .imgW:hover .overlay {
     opacity: 1;
+    border-radius: 5%;
+}
+/*---FIN DE SECCION PROYECTOS---*/
+
+/*---REDES Y FOOTER---*/
+.iconos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    height: 100%;
 }
 
+.iconos svg{
+    width: 50px;
+    height: 50px;
+    margin: 0 10px;
+}
 
 footer {
-    background-color: cornflowerblue;
+    background-color:rgba(123, 4, 208, 0.42);
     color: white;
     text-align: center;
     padding: 5px;
 }
+/*---FIN DE REDES Y FOOTER---*/
 
+/* GENERAL */
+svg:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease-in-out; 
+}
+
+.linea{
+    border-bottom: 2px solid cornflowerblue;
+    width: max-content;
+    transform: scale(1.01); 
+}
+
+.linea:hover{
+    border-bottom:2px solid mediumslateblue;
+    width: max-content;
+}
+
+.boton {
+    background-color: white;
+    padding: 10px 20px;
+    border: cornflowerblue solid 2px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+
+.boton:hover {
+    background-color: cornflowerblue;
+    color: white;
+    transform: scale(1.01); 
+}
+
+.boton, a{
+    text-decoration: none;
+    color: black;
+}
+/*---FIN DE GENERAL---*/
+
+/*---RESPONSIVE---*/
 @media screen and (max-width: 768px) {
     header nav ul {
         flex-direction: column;
@@ -283,3 +311,4 @@ footer {
         padding: 10px;
     }
 }
+/*---FIN DE RESPONSIVE---*/
