@@ -5,19 +5,32 @@
 }
 
 body {
-    font-family: 'Fira Code', monospace;;
+    font-family: 'Fira Code', monospace;
+    background-color: white;
+    color: black;
 }
 
 header {
-    background-color: white;
-    color: black;
-    padding: 20px;
+    background-color: cornflowerblue;
+    padding: 1%;
 }
 
 nav {
+    padding-left: 9%;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding-right: 10%;
+}
+
+main {
+    margin-left: 10%;
+    padding-right: 10%;
+}
+
+h1{
+    color: cornflowerblue;
+    font-size:2em;
 }
 
 .logo {
@@ -33,33 +46,61 @@ nav ul li {
     margin-right: 20px;
 }
 
+nav a{
+    text-decoration: none;
+    color: white;
+    transform: scale(1.01); 
+}
+
+nav a:hover{
+    border-bottom: 2px solid white;
+    width: max-content;
+}
+
 #aboutMe {
     display: flex;
     align-items: center;
-    padding: 20px;
+    padding-top: 7%;
 }
 
 #aboutMe img {
-    max-width: 20%;
-    margin-right: 15%;
+    padding-top: 10%;
+    max-width: 22%;
+    margin-right: 10%;
 }
 
 #aboutMe div {
-    text-align: center;
-    padding-left: 5%;
+    padding-top: 7%;
     flex-basis: 100%;
     margin: 3%;
 }
 
 #aboutMe p{
     text-align: justify;
-    padding: 3%;
+    padding-top: 3%;
+    padding-bottom: 3%;
+}
+
+svg:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease-in-out; 
+}
+
+
+.linea{
+    border-bottom: 2px solid cornflowerblue;
+    width: max-content;
+    transform: scale(1.01); 
+}
+
+.linea:hover{
+    border-bottom:2px solid mediumslateblue;
+    width: max-content;
 }
 
 
 .boton {
     background-color: white;
-    color: black;
     padding: 10px 20px;
     border: cornflowerblue solid 2px;
     border-radius: 5px;
@@ -73,11 +114,15 @@ nav ul li {
     transform: scale(1.01); 
 }
 
-#habilidades{
-    padding-top: 2%;
-    padding-left: 10%;
-    padding-right: 10%;
+.boton, a{
+    text-decoration: none;
+    color: black;
 }
+
+#habilidades{
+    padding-top: 15%;
+}
+
 .habs {
     display: flex;
     justify-content: space-between;
@@ -90,12 +135,151 @@ nav ul li {
 }
 
 section {
-    padding: 20px;
+    padding-top: 10%;
 }
+
+#contacto {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#contacto p{
+    padding-right: 30%;
+    margin:1%;
+}
+
+#contacto form input,
+#contacto form textarea {
+    margin-left: 7%;
+    width: 60%;
+    display: block;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#contacto form textarea{
+    height: 120px;
+}
+
+#contacto form button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: cornflowerblue;
+    color: white;
+    margin-right: 30%;
+    margin-top: 3%;
+}
+
+#contacto form button:hover {
+    background-color: white;
+    border: 1px solid cornflowerblue;
+    color:cornflowerblue;
+}
+
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    gap: 3%;
+    margin-top: 50px;
+}
+
+.imgW {
+    position: relative;
+    width: calc(25% - 3%);
+    height: 200px;
+}
+
+.imgW img {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 3, 210, 0.612);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.imgW:hover .overlay {
+    opacity: 1;
+}
+
 
 footer {
     background-color: cornflowerblue;
     color: white;
     text-align: center;
     padding: 5px;
+}
+
+@media screen and (max-width: 768px) {
+    header nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    #aboutMe {
+        flex-direction: column-reverse;
+    }
+    
+    #aboutMe img {
+        max-width: 100%;
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+    
+    .logo {
+        text-align: center;
+        margin-bottom: 15px;
+    }
+    
+    #habilidades {
+        padding: 2% 5%;
+    }
+    
+    .habs {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    header {
+        padding: 10px;
+    }
+    
+    .logo {
+        font-size: 20px;
+    }
+    
+    nav ul li {
+        margin-right: 10px;
+    }
+    
+    #aboutMe div {
+        padding-left: 0;
+    }
+    
+    #aboutMe p {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+    
+    footer {
+        padding: 10px;
+    }
 }
